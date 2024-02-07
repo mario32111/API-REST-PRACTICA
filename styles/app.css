@@ -1,0 +1,24 @@
+:root{
+    --azul-claro: #6EC6FF;
+    --azul-medio: #4285F4;
+    --azul-oscuro: #1A237E;
+    --blanco: #ffffff;
+    --negro: #000000;
+    --font-family-titles: 'Dosis', 'sans-serif';
+    --font-family-text: 'Red Hat Display', 'sans-serif';
+    --font-weigth-title-title1:800;
+    --font-weigth-title-title2:700;
+    --font-weigth-title-text1:400;
+    --font-weigth-title-text2:500;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: var(--font-family-text);
+    font-size: 62.5%;
+}

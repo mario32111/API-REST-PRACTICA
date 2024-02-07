@@ -1,15 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movies app</title>
+    <title>MoviePlank</title>
     <link rel="stylesheet" href="./styles/app.css">
-</head>
-<body>
-    <h1>Movies app</h1>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700;800&family=Gloria+Hallelujah&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Red+Hat+Display:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="./img/logo.png" type="image/x-icon">
 
+</head>
+
+<body>
+    <header>
+        <div class="search-container">
+            <input type="text" placeholder="Buscar...">
+            <button type="submit"><i class="fas fa-search"></i></button> <!-- Icono de lupa de Font Awesome -->
+        </div>
+    </header>
+    <nav>
+        <img src="./img/logo.png" alt="">
+        <h1>Movies Plank</h1>
+        <span id="btn-opciones"></span>
+        <ul>
+            <li>Inicio</li>
+            <li>Estrenos</li>
+            <li>Generos</li>
+            <li>Tendencias</li>
+        </ul>
+    </nav>
+
+    <main></main>
+    <footer></footer>
     <script src="./src/secrets.js"></script>
     <script src="./src/main.js"></script>
+    <script src="https://kit.fontawesome.com/62965fc0f0.js" crossorigin="anonymous"></script>
+
 </body>
+
 </html>
