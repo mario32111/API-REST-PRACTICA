@@ -22,37 +22,3 @@ html {
     font-family: var(--font-family-text);
     font-size: 62.5%;
 }
-
-
-header{
-    display: flex;
-    height: 10%;
-    max-height: 50px;
-    justify-content: center;
-    height: 100%;
-}
-
-.search-container{
-    display: flex;
-    width: 80%;
-}
-
-.caja-busqueda{
-    width: 90%;
-}
-
-
-.cont-navbar{
-    display: flex;
-    flex-direction: column;
-    width: 2%;
-    height: 90vh;
-}
-
-.lista-opciones{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    margin-top: 120px;
-    height: 50%;
-}
