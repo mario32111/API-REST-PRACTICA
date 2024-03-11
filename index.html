@@ -21,15 +21,24 @@
 
 <body>
     <header>
-        <div class="search-container">
-            <button type="submit"><i class="fas fa-search btn-busqueda"></i></button> <!-- Icono de lupa de Font Awesome -->
-            <input type="text" class="caja-busqueda" placeholder="Buscar...">
+        <div class="header-search-container">
+            <span class="search-container--logo"></span>
+            <div class="caja-busqueda-container">
+                <input type="text" class="caja-busqueda-container--caja-busqueda" placeholder="Buscar...">
+                <button type="submit" class="caja-busqueda-container--btn-busqueda"><i class="fas fa-search "></i></button>
+            </div>
         </div>
     </header>
-
-
-
-    <main></main>
+    <main>
+        <section class="main-categories-container">
+            <ul class="categories-container--lista">
+                <li class="lista-categorie"><span></span><a href="#">Terror</a></li>
+                <li class="lista-categorie"><span></span><a href="#">Accion</a></li>
+                <li class="lista-categorie"><span></span><a href="#">Comedia</a></li>
+                <li class="lista-categorie"><span></span><a href="#">Amor</a></li>
+            </ul>
+        </section>
+    </main>
     <footer></footer>
     <script src="./src/secrets.js"></script>
     <script src="./src/main.js"></script>

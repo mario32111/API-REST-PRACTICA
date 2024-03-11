@@ -22,3 +22,86 @@ html {
     font-family: var(--font-family-text);
     font-size: 62.5%;
 }
+
+
+header{
+    height: auto;
+    padding: 8px 0;
+}
+.header-search-container{
+    width: 80%;
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+}
+
+.header-search-container .search-container--logo{
+    background-image: url(/img/logo.png);
+    display: inline-block;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 40px;
+}
+
+.caja-busqueda-container{
+    width: 100%;
+    border-radius: 100px;
+    border: 1px solid #dfe1e5;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 4px 2px 5px rgb(238, 238, 238);
+}
+.caja-busqueda-container--btn-busqueda{
+    width: 20px;
+    height: 20px;
+}
+
+.caja-busqueda-container .caja-busqueda-container--caja-busqueda{
+    height: 40px;
+    width: 80%;
+    border: none;
+    outline: none;
+}
+/* Seccion de categorias */
+.main-categories-container{
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-categories-container .categories-container--lista{
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    justify-content: space-around;
+}
+
+.categories-container--lista li{
+    list-style: none;
+}
+
+.lista-categorie{
+    position: relative;
+}
+
+.lista-categorie span{
+    position: absolute;
+    left: calc(50% - 12px);
+    top: 1px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #1A237E;
+    border-radius: 10px;
+}
+
+.lista-categorie a{
+    position: absolute;
+    right: calc(50% +10px);
+    text-decoration: none;
+}
