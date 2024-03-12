@@ -2,8 +2,11 @@
     --azul-claro: #6EC6FF;
     --azul-medio: #4285F4;
     --azul-oscuro: #1A237E;
-    --blanco: #ffffff;
-    --negro: #000000;
+    --black: #282623;
+    --warm-black: #201e1c;
+    --gris: #bababa;
+    --off-white: #faf8f7;
+    --just-white: #fff;
     --font-family-titles: 'Dosis', 'sans-serif';
     --font-family-text: 'Red Hat Display', 'sans-serif';
     --font-weigth-title-title1:800;
@@ -38,51 +41,72 @@ header{
 }
 
 .header-search-container .search-container--logo{
-    background-image: url(/img/logo.png);
+    background-image: url(/img/logo.svg);
     display: inline-block;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     width: 40px;
+    margin-right: 4px;
 }
 
+
 .caja-busqueda-container{
-    width: 100%;
-    border-radius: 100px;
+    width: 90%;
+    border-radius: 12px;
     border: 1px solid #dfe1e5;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     box-shadow: 4px 2px 5px rgb(238, 238, 238);
+    background-color: var(--azul-oscuro);
 }
 .caja-busqueda-container--btn-busqueda{
+    position: relative;
+    left: -3px;
+    top: 2px;
     width: 20px;
     height: 20px;
 }
 
 .caja-busqueda-container .caja-busqueda-container--caja-busqueda{
     height: 40px;
-    width: 80%;
+    width: 85%;
     border: none;
     outline: none;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 12px;
 }
 /* Seccion de categorias */
 .main-categories-container{
     height: auto;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
+    margin-top: 12px;
+}
+
+.main-categories-container h2{
+    margin-bottom: 5px;
 }
 
 .main-categories-container .categories-container--lista{
     display: flex;
     flex-direction: row;
-    width: 70%;
+    width: 80%;
     justify-content: space-around;
 }
 
 .categories-container--lista li{
     list-style: none;
+}
+
+.categories-container--lista li a{
+    font-family: var(--font-family-text);
+    font-size: 1.2rem;
+    font-weight: 500;
 }
 
 .lista-categorie{
@@ -96,12 +120,76 @@ header{
     display: inline-block;
     width: 10px;
     height: 10px;
-    background-color: #1A237E;
     border-radius: 10px;
+}
+
+.lista-categorie:nth-child(1) span {
+    background-color: #1A237E;
+}
+
+.lista-categorie:nth-child(2) span {
+    background-color: #00832c;
+}
+
+.lista-categorie:nth-child(3) span {
+    background-color: #ff9900;
+}
+
+.lista-categorie:nth-child(4) span {
+    background-color: #b40054;
 }
 
 .lista-categorie a{
     position: absolute;
     right: calc(50% +10px);
     text-decoration: none;
+}
+
+
+
+/* Seccion de tendencias */
+.main-trending-container{
+    margin-top: 40px;
+    width: 100%;
+}
+
+.trending-container-top{
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.trending-container-top h2, .trending-container-top input{
+    display: inline-block;
+}
+
+.trending-container-bot{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-between;
+    /* Esto habilita el scroll en el contenedor */
+    overflow-x: scroll;
+    overflow-y: hidden;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+}
+
+.trending-container-bot img{
+    width: 150px;
+    margin: 12px;
+}
+
+.trending-container-top--btn{
+    border-radius: 3px;
+    border: none;
+    width: 100px;
+    height: 25px;
+}
+
+.ocultar{
+    display: none;
 }
