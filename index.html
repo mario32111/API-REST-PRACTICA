@@ -21,7 +21,7 @@
 
 <body>
     <header>
-        <div class="header-search-container">
+        <div class="header-search-container ocultar">
             <span class="search-container--logo"></span>
             <div class="caja-busqueda-container">
                 <input type="text" class="caja-busqueda-container--caja-busqueda" placeholder="Buscar...">
@@ -30,22 +30,43 @@
         </div>
     </header>
     <main>
-        <section class="main-categories-container" >
-            <h2>Categorias</h2>
-            <ul class="categories-container--lista">
-                <li class="lista-categorie"><span></span><a href="#">Terror</a></li>
-                <li class="lista-categorie"><span></span><a href="#">Accion</a></li>
-                <li class="lista-categorie"><span></span><a href="#">Comedia</a></li>
-                <li class="lista-categorie"><span></span><a href="#">Amor</a></li>
-            </ul>
+
+        <section class="main-detalles-container">
+            <div class="detalles-container-top">
+                <button class="detalles-container-top-button" value="Atras"><i class="fa-solid fa-arrow-left retroceder"></i></button>
+                <img class="detalles-container-top-img" src="/img/coco.jpg" alt="">
+            </div>
+
+            <div class="detalles-container-bot">
+                <div class="detalles-container-bot--container-bot-top">
+                    <h2 class="container-bot-top-titulo">COCO</h2>
+                    <div class="score-container">
+                        <p class="score-container-text">Score</p>
+                        <img src="score-container-stars" alt="">
+                    </div>
+                </div>
+
+                <div class="detalles-container-bot--container-bot-bot">
+                    <ul class="container-bot-bot--categories">
+                        <li class="categories-li"><span></span><a href="#">Fantasía</a></li>
+                        <li class="categories-li"><span></span><a href="#">Animadas</a></li>
+                        <li class="categories-li"><span></span><a href="#">Infantil</a></li>
+                    </ul>
+                    <h2 class="container-bot-bot--titulo">Descripción</h2>
+                    <p class="container-bot-bot--texto">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam
+                        explicabo praesentium minus debitis provident culpa quae voluptas quos eius reiciendis, ducimus
+                        dolores omnis laboriosam, in, cupiditate rem sit molestias. Accusantium vel aut facere illo
+                        veniam.</p>
+                </div>
+            </div>
         </section>
 
-        <section class="main-trending-container">
+        <section class="main-trending-container ocultar">
             <div class="trending-container-top">
                 <h2 class="trending-container-top--titile">Tendencias</h2>
                 <input type="button" value="Ver mas" class="trending-container-top--btn">
             </div>
-            
+
             <div class="trending-container-bot">
                 <img src="/img/coco.jpg" alt="" class="trending-container-bot--img">
                 <img src="/img/coco.jpg" alt="" class="trending-container-bot--img">
@@ -57,6 +78,16 @@
 
             </div>
 
+        </section>
+
+        <section class="main-categories-container ocultar">
+            <h2>Categorias</h2>
+            <ul class="categories-container--lista">
+                <li><span></span><a href="#">Terror</a></li>
+                <li><span></span><a href="#">Accion</a></li>
+                <li><span></span><a href="#">Comedia</a></li>
+                <li><span></span><a href="#">Amor</a></li>
+            </ul>
         </section>
     </main>
     <footer></footer>

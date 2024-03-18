@@ -1,6 +1,6 @@
 :root{
-    --azul-claro: #6EC6FF;
-    --azul-medio: #4285F4;
+    --azul-claro: #e3f4ff;
+    --azul-medio: #71a8ff;
     --azul-oscuro: #1A237E;
     --black: #282623;
     --warm-black: #201e1c;
@@ -85,7 +85,7 @@ header{
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin-top: 12px;
+    margin-top: 25px;
 }
 
 .main-categories-container h2{
@@ -149,7 +149,7 @@ header{
 
 /* Seccion de tendencias */
 .main-trending-container{
-    margin-top: 40px;
+    margin-top: 25px;
     width: 100%;
 }
 
@@ -188,8 +188,65 @@ header{
     border: none;
     width: 100px;
     height: 25px;
+    background-color: var(--azul-claro);
+}
+
+.fa-search {
+    color: white;
+}
+
+/* Seccion de detalles */
+
+
+.main-detalles-container{
+    height: 100%;
+}
+
+.detalles-container-top{
+    position: relative;
+    height: 50vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(10px); /* Aplica el filtro solo al contenedor */  
+}
+
+.detalles-container-top::before {
+    content: ""; /* Crea un pseudo-elemento para aplicar el filtro de desenfoque */
+    position: absolute; /* Posiciona el pseudo-elemento */
+    width: 100%; /* Ajusta el ancho para cubrir completamente el contenedor */
+    height: 100%; /* Ajusta la altura para cubrir completamente el contenedor */
+    background-image: url(/img/coco.jpg); /* Establece la imagen de fondo */
+    background-position: center; /* Centra la imagen de fondo */
+    background-repeat: no-repeat; /* Evita la repetición de la imagen de fondo */
+    background-size: cover; /* Ajusta el tamaño de la imagen de fondo para cubrir completamente el contenedor */
+    filter: blur(10px); /* Aplica el filtro de desenfoque al pseudo-elemento */
+    z-index: -1; /* Coloca el pseudo-elemento detrás del contenido */
+}
+
+
+.detalles-container-top-img{
+    width: 40%;
+    max-width: 150px;
+    position: absolute;
+    bottom: calc(50% - 90px);
+    left: calc(30%);
+    border-radius: 12px;
+}
+
+.retroceder{
+    color: white;
+    z-index: 3;
+}
+
+
+.detalles-container-top-button{
+    background-color: transparent;
+    border: none;
+    position: absolute;
 }
 
 .ocultar{
     display: none;
 }
+
