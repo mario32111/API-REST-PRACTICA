@@ -32,7 +32,7 @@ async function getCategoriesPreview() {
     const {data} = await api("genre/movie/list");
 
     const categores= data.genres
-
+    console.log(categores)
     categores.forEach(category => {
         const categoriesList = document.querySelector('#categoriesPreview .categories-container--lista')
 
@@ -53,5 +53,18 @@ async function getCategoriesPreview() {
         categoriesList.appendChild(categoryContainer);
 
     });
+}
+
+
+
+async function getCategoryName(id) {
+    const {data} = await api("genre/movie/list");
+    const categores = data.genres;
+
+    // Utiliza find en lugar de forEach para buscar la categoría
+    const category = categores.find(category => category.id == id);
+
+    // Devuelve el nombre de la categoría si se encontró, de lo contrario, devuelve una cadena vacía
+    return category ? category.name : "";
 }
 

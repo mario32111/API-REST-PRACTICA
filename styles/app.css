@@ -227,8 +227,13 @@ header{
     left: 10px;
 }
 
+.retroceder-white{
+    color: white;
+    z-index: 3;
+    left: 10px;
+}
 
-.back-button{
+.main-back-button{
     background-color: transparent;
     border: none;
 }
@@ -372,4 +377,28 @@ header{
     width: 100px;
     height: 25px;
     background-color: var(--azul-claro);
+}
+
+
+/* Seccion de una sola categoria */
+
+.category-container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 12px auto 0px auto;
+}
+
+
+
+.movie-container img{
+    width: 110px;
+    margin: 3px 6px;
+    border-radius: 12px;
+
+}
+
+.movie-container{
+    width: auto;
+    height: auto;
 }
