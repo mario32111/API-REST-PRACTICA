@@ -109,7 +109,7 @@ header{
 }
 
 .main-categories-container h2{
-    margin-bottom: 5px;
+    margin-bottom: 25px;
 }
 
 .main-categories-container .categories-container--lista{
@@ -122,7 +122,7 @@ header{
 
 .categories-container--lista li{
     width: 100px;
-    height: 50px;
+    height: 30px;
     list-style: none;
 }
 
