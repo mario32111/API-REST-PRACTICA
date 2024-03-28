@@ -13,7 +13,27 @@
     --font-weigth-title-title2:700;
     --font-weigth-title-text1:400;
     --font-weigth-title-text2:500;
+
+
+
+    --purple-light-1: #FBFAFB;
+    --purple-light-2: #EEEAF2;
+    --purple-medium-1: #AA83C8;
+    --purple-medium-2: #8B48BF;
+    --purple-medium-3: #5C218A;
+    --purple-dark-1: #3E0F64;
+    --purple-dark-2: #2A0646;
+
+    --yellow: #EECC75;
+    --green: #CAD297;
+    --aqua: #B7EAC5;
+    --lightBlue: #A2EEE5;
+    --darkBlue: #8EA2EA;
+    --red: #F09D9D
 }
+
+
+
 
 * {
     margin: 0;
@@ -97,9 +117,12 @@ header{
     flex-direction: row;
     width: 80%;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .categories-container--lista li{
+    width: 100px;
+    height: 50px;
     list-style: none;
 }
 
@@ -107,42 +130,6 @@ header{
     font-family: var(--font-family-text);
     font-size: 1.2rem;
     font-weight: 500;
-}
-
-.lista-categorie{
-    position: relative;
-}
-
-.lista-categorie span{
-    position: absolute;
-    left: calc(50% - 12px);
-    top: 1px;
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    border-radius: 10px;
-}
-
-.lista-categorie:nth-child(1) span {
-    background-color: #1A237E;
-}
-
-.lista-categorie:nth-child(2) span {
-    background-color: #00832c;
-}
-
-.lista-categorie:nth-child(3) span {
-    background-color: #ff9900;
-}
-
-.lista-categorie:nth-child(4) span {
-    background-color: #b40054;
-}
-
-.lista-categorie a{
-    position: absolute;
-    right: calc(50% +10px);
-    text-decoration: none;
 }
 
 
@@ -299,30 +286,36 @@ header{
 
 .lista-categorie span{
     position: absolute;
-    left: calc(50% - 12px);
-    top: 1px;
+    left: calc(0% - 12px);
+    top: calc(0% + 3px);
     display: inline-block;
     width: 10px;
     height: 10px;
     border-radius: 10px;
 }
 
-.lista-categorie:nth-child(1) span {
-    background-color: #1A237E;
-}
-
-.lista-categorie:nth-child(2) span {
-    background-color: #00832c;
-}
-
-.lista-categorie:nth-child(3) span {
-    background-color: #ff9900;
-}
+#id28 { background-color: var(--yellow)}
+#id12 { background-color: var(--red) }
+#id16 { background-color: var(--green) }
+#id35 { background-color: var(--lightBlue) }
+#id80 { background-color: var(--darkBlue) }
+#id99 { background-color: var(--purple-dark-1); }
+#id18 { background-color: var(--purple-medium-1); }
+#id10751 { background-color: var(--yellow); }
+#id14 { background-color: var(--red); }
+#id36 { background-color: var(--green); }
+#id27 { background-color: var(--lightBlue); }
+#id10402 { background-color: var(--darkBlue); }
+#id9648 { background-color: var(--purple-dark-1); }
+#id10749 { background-color: var(--purple-medium-1); }
+#id878 { background-color: var(--yellow); }
+#id10770 { background-color: var(--red); }
+#id53 { background-color: var(--green); }
+#id10752 { background-color: var(--lightBlue); }
+#id37 { background-color: var(--darkBlue); }
 
 
 .lista-categorie a{
-    position: absolute;
-    right: calc(50% +10px);
     text-decoration: none;
 }
 
