@@ -222,17 +222,15 @@ header{
 }
 
 .retroceder{
-    color: white;
+    color: blue;
     z-index: 3;
-    position: absolute;
     left: 10px;
 }
 
 
-.detalles-container-top-button{
+.back-button{
     background-color: transparent;
     border: none;
-    position: absolute;
 }
 
 .ocultar{
@@ -329,4 +327,49 @@ header{
 
 .detalles-container-bot--container-bot-bot{
     margin-bottom: 15px;
+}
+
+/* Seccion de similares */
+
+.main-similares-container{
+    margin-top: 25px;
+    width: 100%;
+}
+
+.similares-container-top{
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.similares-container-top h2, .similares-container-top input{
+    display: inline-block;
+}
+
+.similares-container-bot{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-between;
+    /* Esto habilita el scroll en el contenedor */
+    overflow-x: scroll;
+    overflow-y: hidden;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+}
+
+.similares-container-bot img{
+    width: 150px;
+    margin: 12px;
+}
+
+.similares-container-top--btn{
+    border-radius: 3px;
+    border: none;
+    width: 100px;
+    height: 25px;
+    background-color: var(--azul-claro);
 }
