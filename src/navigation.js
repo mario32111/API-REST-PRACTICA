@@ -2,7 +2,7 @@ window.addEventListener('DOMContentLoaded', navigator, false)
 window.addEventListener('hashchange', navigator, false)
 
 searchButton.addEventListener('click', () => {
-    location.hash = '#search='
+    location.hash = '#search='+ searchInput.value;
 })
 
 verMasTrending.addEventListener('click', () => {
@@ -25,7 +25,7 @@ function navigator() {
     } else {
         homePage()
     }
-
+    document.documentElement.scrollTop= 0
 }
 
 function homePage() {
@@ -37,10 +37,14 @@ function homePage() {
     tituloCategoria.classList.add('ocultar')
     backButton.classList.add('ocultar')
     tituloCategoria.classList.add('ocultar')
+    categoryImgs.classList.add('ocultar')
+    categorySection.classList.add('ocultar')
+
 
     categoriesSection.classList.remove('ocultar')
     trendingSection.classList.remove('ocultar')
     tituloCategoria.classList.remove('ocultar')
+    searchInput.value= ""
     getTrendingMoviesPreview();
     getCategoriesPreview();
 }
@@ -70,9 +74,9 @@ function searchPage() {
     backButton.classList.remove('ocultar')
     headerSection.classList.remove('ocultar')
     categorySection.classList.remove('ocultar')
-    tituloCategoria.classList.remove('ocultar')
-    tituloCategoria.textContent = "busqueda";
+    tituloCategoria.classList.add('ocultar')
 
+    getSearchByCategory(location.hash.split('search=')[1])
 }
 
 function trendsPage() {
@@ -82,7 +86,9 @@ function trendsPage() {
     trendingSection.classList.add('ocultar')
     similaresSection.classList.add('ocultar')
     categoriesSection.classList.add('ocultar')
-    
+
+    categorySection.classList.remove('ocultar')
+    categoryImgs.classList.remove('ocultar')
     backButton.classList.remove('ocultar')
     categorySection.classList.remove('ocultar')
     tituloCategoria.classList.remove('ocultar')
@@ -98,7 +104,8 @@ function categoryPage() {
     trendingSection.classList.add('ocultar')
     similaresSection.classList.add('ocultar')
     categoriesSection.classList.add('ocultar')
-    
+
+    categoryImgs.classList.remove('ocultar')
     backButton.classList.remove('ocultar')
     categorySection.classList.remove('ocultar')
     tituloCategoria.classList.remove('ocultar')
