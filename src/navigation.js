@@ -67,6 +67,7 @@ function searchPage() {
     similaresSection.classList.add('ocultar')
     categoriesSection.classList.add('ocultar')
 
+    backButton.classList.remove('ocultar')
     headerSection.classList.remove('ocultar')
     categorySection.classList.remove('ocultar')
     tituloCategoria.classList.remove('ocultar')
@@ -111,6 +112,5 @@ function categoryPage() {
             console.error("Error al obtener el nombre de la categoría:", error);
         });
 
-    console.log('xd')
-
+    getMoviesByCategory(location.hash.split('category=')[1]);
 }
