@@ -9,7 +9,12 @@ verMasTrending.addEventListener('click', () => {
     location.hash = '#trends'
 })
 
-verMasTrending
+backButton.addEventListener('click', () => {
+    history.back()
+    document.documentElement.scrollTop= 0
+});
+
+verMasTrending.addEventListener('click', getTrendingMovies())
 
 function navigator() {
     console.log({ location })
@@ -33,17 +38,16 @@ function homePage() {
     headerSection.classList.remove('ocultar')  
     detallesSection.classList.add('ocultar')
     similaresSection.classList.add('ocultar')
-    categorySection.classList.add('ocultar')
-    tituloCategoria.classList.add('ocultar')
     backButton.classList.add('ocultar')
     tituloCategoria.classList.add('ocultar')
     categoryImgs.classList.add('ocultar')
     categorySection.classList.add('ocultar')
+    tituloCategoria.classList.add('ocultar')
 
 
+    categoriesList.classList.remove('ocultar')
     categoriesSection.classList.remove('ocultar')
     trendingSection.classList.remove('ocultar')
-    tituloCategoria.classList.remove('ocultar')
     searchInput.value= ""
     getTrendingMoviesPreview();
     getCategoriesPreview();
@@ -51,15 +55,18 @@ function homePage() {
 
 function moviePage() {
     headerSection.classList.add('ocultar')
-    categoriesSection.classList.add('ocultar')
+    categoriesSection.classList.remove('ocultar')
     trendingSection.classList.add('ocultar')
     categorySection.classList.add('ocultar')
     tituloCategoria.classList.add('ocultar')
-
+    
+    
+    categoriesSection.classList.remove('ocultar')
     detallesSection.classList.remove('ocultar')
     similaresSection.classList.remove('ocultar')
     backButton.classList.remove('ocultar')
 
+    getMovieById (location.hash.split('movie=')[1]);
     console.log('!MOVIE!!')
 }
 
@@ -90,10 +97,10 @@ function trendsPage() {
     categorySection.classList.remove('ocultar')
     categoryImgs.classList.remove('ocultar')
     backButton.classList.remove('ocultar')
-    categorySection.classList.remove('ocultar')
     tituloCategoria.classList.remove('ocultar')
     console.log('xd')
     tituloCategoria.textContent = "tendencias";
+    getTrendingMovies();
 
 }
 

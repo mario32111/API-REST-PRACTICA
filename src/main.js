@@ -16,6 +16,9 @@ function createMovies(movies, container){
     movies.forEach(movie => {
         const movieContainer = document.createElement('div');
         movieContainer.classList.add('movie-container');
+        movieContainer.addEventListener('click', () =>{
+            location.hash = '#movie='+ movie.id;
+        })
 
         const movieImg = document.createElement('img');
         movieImg.classList.add('movie-container-img');
@@ -64,6 +67,9 @@ async function getTrendingMoviesPreview() {
     movies.forEach(movie => {
         const movieContainer = document.createElement('div');
         movieContainer.classList.add('trending-container-bot--movie-container');
+        movieContainer.addEventListener('click', () =>{
+            location.hash = '#movie='+ movie.id;
+        })
 
         const movieImg = document.createElement('img');
         movieImg.classList.add('movie-container-img');
@@ -116,4 +122,55 @@ async function getSearchByCategory(query) {
 
     const movies = data.results;
     createMovies(movies, categoryImgs)
+}
+
+async function getTrendingMovies() {
+    const {data} = await api("trending/movie/day");
+
+
+    const movies = data.results;
+    createMovies(movies, categoryImgs)
+}
+
+async function getMovieById(id) {
+    const { data: movie } = await api("movie/" + id);
+    
+    
+    const movieImgUrl= 'https://image.tmdb.org/t/p/w500/' + movie.poster_path;
+    const estiloPseudoElemento = document.styleSheets[0].addRule('.detalles-container-top::before', `background-image: url(${movieImgUrl})`);
+
+    //fondo.style.background= `url(${movieImgUrl})`;
+    detallesImage.setAttribute('src', movieImgUrl)
+    containerTopTitulo.textContent = movie.title;
+    score.textContent = movie.vote_average; 
+    DescriptionMovie.textContent = movie.overview;
+
+    createCategiries(movie.genres,categoriesList)
+    getRelatedMoviesId(id);
+}
+
+async function getRelatedMoviesId(id){
+    const { data } = await api(`movie/${id}/similar`);
+    
+    const relatedMovies =  data.results;
+    console.log(relatedMovies)
+    
+    const trendingTop = document.querySelector('.similares-container-bot')
+    trendingTop.innerHTML = ""
+
+    relatedMovies.forEach(movie => {
+        const movieContainer = document.createElement('div');
+        movieContainer.classList.add('.similares-container-bot--movie-container');
+        movieContainer.addEventListener('click', () =>{
+            location.hash = '#movie='+ movie.id;
+        })
+
+        const movieImg = document.createElement('img');
+        movieImg.classList.add('movie-container-img');
+        movieImg.setAttribute('alt', movie.title);
+        movieImg.setAttribute('src','https://image.tmdb.org/t/p/w300/' + movie.poster_path);
+
+        movieContainer.appendChild(movieImg);
+        trendingTop.appendChild(movieContainer)
+    });
 }

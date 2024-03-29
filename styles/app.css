@@ -284,6 +284,7 @@ header{
 }
 
 .lista-categorie{
+    list-style-type: none;
     position: relative;
 }
 
@@ -402,3 +403,4 @@ header{
     width: auto;
     height: auto;
 }
+
