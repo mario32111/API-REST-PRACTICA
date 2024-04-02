@@ -18,6 +18,7 @@ const trendingTop = document.querySelector(".trending-container-top");
 const trendingBot = document.querySelector(".trending-container-bot");
 
 // Elementos Individuales
+const imagenGrande = document.querySelector('.movie-container-img')
 const searchLogo = document.querySelector(".search-container--logo");
 const searchInput = document.querySelector(".caja-busqueda-container--caja-busqueda");
 const searchButton = document.querySelector(".caja-busqueda-container--btn-busqueda");

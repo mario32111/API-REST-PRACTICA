@@ -12,6 +12,7 @@ const api = axios.create({
 
 function createMovies(movies, container){
     container.innerHTML = "";
+    container.classList.remove('category-container--loading')
 
     movies.forEach(movie => {
         const movieContainer = document.createElement('div');

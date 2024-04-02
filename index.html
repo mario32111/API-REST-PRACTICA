@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MoviePlank</title>
+    <link rel="icon" href="./img/logo.svg" type="image/x-icon">
     <link rel="stylesheet" href="./styles/app.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,6 +21,9 @@
 </head>
 
 <body>
+
+
+
     <header>
         <button class="main-back-button" value="Atras"><i class="fa-solid fa-arrow-left retroceder"></i></button>
 
@@ -33,7 +37,7 @@
     </header>
     <main>
 
-        <section class="main-detalles-container">
+        <section class="main-detalles-container ocultar">
             <div class="detalles-container-top">
                 <img class="detalles-container-top-img" src="/img/coco.jpg" alt="">
             </div>
@@ -50,7 +54,7 @@
 
                 <div class="detalles-container-bot--container-bot-bot">
                     <!-- Cambiar -->
-<!--                     <ul class="container-bot-bot--categories">
+                    <!--                     <ul class="container-bot-bot--categories">
                         <li class="categories-li lista-categorie"><span></span><a href="#">Fantasía</a></li>
                         <li class="categories-li lista-categorie"><span></span><a href="#">Animadas</a></li>
                         <li class="categories-li lista-categorie"><span></span><a href="#">Infantil</a></li>
@@ -58,7 +62,7 @@
 
 
 
-                    
+
                     <div class="c">
                         <h2 class="container-bot-bot--titulo">Descripción</h2>
                         <p class="container-bot-bot--texto">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -80,8 +84,9 @@
                 <div class="similares-container-bot">
 
                     <div class="similares-container-bot--movie-container">
-<!--                         <img src="/img/coco.jpg" alt="" class="movie-container-img">
- -->                    </div>
+                        <!--                         <img src="/img/coco.jpg" alt="" class="movie-container-img">
+ -->
+                    </div>
 
                 </div>
 
@@ -95,9 +100,18 @@
             </div>
 
             <div class="trending-container-bot">
-                <!--                 <div class="trending-container-bot--movie-container">
-                    <img src="/img/coco.jpg" alt="" class="movie-container-img">
-                </div> -->
+                <div class="trending-container-bot--movie-container trending-container-bot--movie-container--loading">
+                    <!--                     <img src="" alt="" class="movie-container-img" loading="lazy">
+                     -->
+                </div>
+                <div class="trending-container-bot--movie-container trending-container-bot--movie-container--loading">
+                    <!--                     <img src="" alt="" class="movie-container-img" loading="lazy">
+                         -->
+                </div>
+                <div class="trending-container-bot--movie-container trending-container-bot--movie-container--loading">
+                    <!--                     <img src="" alt="" class="movie-container-img" loading="lazy">
+                             -->
+                </div>
             </div>
 
         </section>
@@ -105,14 +119,22 @@
         <section class="main-categories-container" id="categoriesPreview">
             <h2>Categorias</h2>
             <ul class="categories-container--lista">
-                <!--                 <li class="lista-categorie"><span></span><a class="lista-categorie-titile" href="#">Terror</a></li>
- -->
+                <li class="lista-categorie lista-categorie--loading"><span></span><a class="lista-categorie-titile " href="#"></a></li>
+                <li class="lista-categorie lista-categorie--loading"><span></span><a class="lista-categorie-titile " href="#"></a></li>
+                <li class="lista-categorie lista-categorie--loading"><span></span><a class="lista-categorie-titile " href="#"></a></li>
+                <li class="lista-categorie lista-categorie--loading"><span></span><a class="lista-categorie-titile " href="#"></a></li>
+                <li class="lista-categorie lista-categorie--loading"><span></span><a class="lista-categorie-titile " href="#"></a></li>
+                <li class="lista-categorie lista-categorie--loading"><span></span><a class="lista-categorie-titile " href="#"></a></li>
+                <li class="lista-categorie lista-categorie--loading"><span></span><a class="lista-categorie-titile " href="#"></a></li>
+                <li class="lista-categorie lista-categorie--loading"><span></span><a class="lista-categorie-titile " href="#"></a></li>
+                <li class="lista-categorie lista-categorie--loading"><span></span><a class="lista-categorie-titile " href="#"></a></li>
+                <li class="lista-categorie lista-categorie--loading"><span></span><a class="lista-categorie-titile " href="#"></a></li>
             </ul>
         </section>
 
-        <section class="main-category-container" id="categoryViewMore">
+        <section class="main-category-container ocultar" id="categoryViewMore">
             <h2 class="main-category-container-title">Categoria</h2>
-            <article class="category-container">
+            <article class="category-container ">
                 <!--                 <div class="movie-container">
                     <img src="/img/coco.jpg" alt="" class="movie-container-img">
                 </div>
@@ -122,7 +144,10 @@
         </section>
     </main>
     <footer>
-        <h1>hola soy el footer</h1>
+        <!--         <img src="./img/logo.svg" alt="">
+        <p>MoviePlank</p>
+
+        <p>Tu mejor opcion al buscar peliculas</p> -->
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
     <script src="./src/secrets.js"></script>

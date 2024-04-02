@@ -43,7 +43,7 @@ function homePage() {
     categoryImgs.classList.add('ocultar')
     categorySection.classList.add('ocultar')
     tituloCategoria.classList.add('ocultar')
-
+    
 
     categoriesList.classList.remove('ocultar')
     categoriesSection.classList.remove('ocultar')
