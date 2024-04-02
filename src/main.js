@@ -36,7 +36,12 @@ function createMovies(movies, container){
         const movieImg = document.createElement('img');
         movieImg.classList.add('movie-container-img');
         movieImg.setAttribute('alt', movie.title);
-        movieImg.setAttribute('data-image','https://image.tmdb.org/t/p/w300/' + movie.poster_path);
+        if(typeof(movie.poster_path) !== 'string'){
+            movieImg.setAttribute('data-image','../img/image-not-found.jpg');
+        }else{
+            movieImg.setAttribute('data-image','https://image.tmdb.org/t/p/w300/' + movie.poster_path);
+        }
+
 
         observer.observe(movieImg)
 
@@ -89,8 +94,11 @@ async function getTrendingMoviesPreview() {
         const movieImg = document.createElement('img');
         movieImg.classList.add('movie-container-img');
         movieImg.setAttribute('alt', movie.title);
-        movieImg.setAttribute('data-image','https://image.tmdb.org/t/p/w300/' + movie.poster_path);
-
+        if(typeof(movie.poster_path) !== 'string'){
+            movieImg.setAttribute('data-image','../img/image-not-found.jpg');
+        }else{
+            movieImg.setAttribute('data-image','https://image.tmdb.org/t/p/w300/' + movie.poster_path);
+        }
         observer.observe(movieImg)
 
         movieContainer.appendChild(movieImg);
@@ -186,8 +194,12 @@ async function getRelatedMoviesId(id){
         const movieImg = document.createElement('img');
         movieImg.classList.add('movie-container-img');
         movieImg.setAttribute('alt', movie.title);
-        movieImg.setAttribute('src','https://image.tmdb.org/t/p/w300/' + movie.poster_path);
-
+        if(typeof(movie.poster_path) !== 'string'){
+            movieImg.setAttribute('data-image','../img/image-not-found.jpg');
+        }else{
+            movieImg.setAttribute('data-image','https://image.tmdb.org/t/p/w300/' + movie.poster_path);
+        }
+        observer.observe(movieImg)
         movieContainer.appendChild(movieImg);
         trendingTop.appendChild(movieContainer)
     });
