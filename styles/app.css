@@ -400,6 +400,8 @@ header{
 }
 
 .movie-container-img{
+    min-width: 120px;
+    min-height: 225px;
     width: 150px;
     height: 225px;
     border-radius: 12px;
