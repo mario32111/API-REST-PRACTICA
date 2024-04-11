@@ -59,7 +59,7 @@ header{
 }
 
 .header-search-container .search-container--logo{
-    background-image: url(/img/logo.svg);
+    background-image: url(../img/logo.svg);
     display: inline-block;
     background-size: cover;
     background-position: center;
@@ -391,6 +391,9 @@ header{
 }
 
 
+.movie-container{
+    position: relative;
+}
 
 .movie-container img{
     width: 120px;
@@ -408,6 +411,30 @@ header{
     cursor: pointer;
 }
 
+.trending-container-bot--movie-container{
+    position: relative;
+}
+.movie-btn{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    height: 30px;
+    width: 30px;
+    border-radius: 30px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.movie-btn::before{
+    content: '🤍';
+}
+
+.movie-btn--liked::before{
+    content: '💙';
+}
 /* Footer */
 footer{
     width: 100%;
@@ -469,6 +496,38 @@ footer{
 .footer--p2 p{
     color: white;
 }
+
+.liked-container{
+    margin-top: 25px;
+    width: 100%;
+}
+
+.linked-header{
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.liked-movieList{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-between;
+    /* Esto habilita el scroll en el contenedor */
+    overflow-x: scroll;
+    overflow-y: hidden;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+}
+
+.liked-movieList img{
+    width: 150px;
+    margin: 12px;
+}
+
 /* Loading */
 
 .trending-container-bot--movie-container--loading{

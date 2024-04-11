@@ -31,9 +31,7 @@ function createMovies(movies, container, clean = true) {
     movies.forEach(movie => {
         const movieContainer = document.createElement('div');
         movieContainer.classList.add('movie-container');
-        movieContainer.addEventListener('click', () => {
-            location.hash = '#movie=' + movie.id;
-        })
+
 
         const movieImg = document.createElement('img');
         movieImg.classList.add('movie-container-img');
@@ -44,10 +42,20 @@ function createMovies(movies, container, clean = true) {
             movieImg.setAttribute('data-image', 'https://image.tmdb.org/t/p/w300/' + movie.poster_path);
         }
 
-
+        movieImg.addEventListener('click', () => {
+            location.hash = '#movie=' + movie.id;
+        })
         observer.observe(movieImg)
+        
+        const movieBtn = document.createElement('button')
+        movieBtn.classList.add('movie-btn')
+        movieBtn.addEventListener('click', () =>{
+            movieBtn.classList.toggle('movie-btn--liked')
+            /* Agregar la pelicula a local storage */
+        })
 
         movieContainer.appendChild(movieImg);
+        movieContainer.appendChild(movieBtn);
         container.appendChild(movieContainer)
     });
 }
@@ -89,9 +97,7 @@ async function getTrendingMoviesPreview() {
     movies.forEach(movie => {
         const movieContainer = document.createElement('div');
         movieContainer.classList.add('trending-container-bot--movie-container');
-        movieContainer.addEventListener('click', () => {
-            location.hash = '#movie=' + movie.id;
-        })
+
 
         const movieImg = document.createElement('img');
         movieImg.classList.add('movie-container-img');
@@ -101,9 +107,20 @@ async function getTrendingMoviesPreview() {
         } else {
             movieImg.setAttribute('data-image', 'https://image.tmdb.org/t/p/w300/' + movie.poster_path);
         }
+        movieImg.addEventListener('click', () => {
+            location.hash = '#movie=' + movie.id;
+        })
         observer.observe(movieImg)
 
+        const movieBtn = document.createElement('button')
+        movieBtn.classList.add('movie-btn')
+        movieBtn.addEventListener('click', () =>{
+            movieBtn.classList.toggle('movie-btn--liked')
+            /* Agregar la pelicula a local storage */
+        })
+
         movieContainer.appendChild(movieImg);
+        movieContainer.appendChild(movieBtn);
         trendingTop.appendChild(movieContainer)
     });
 
@@ -113,7 +130,6 @@ async function getCategoriesPreview() {
     const { data } = await api("genre/movie/list");
 
     const categores = data.genres
-    console.log(categores)
     const categoriesList = document.querySelector('#categoriesPreview .categories-container--lista')
     createCategiries(categores, categoriesList)
 
@@ -258,7 +274,6 @@ async function getRelatedMoviesId(id) {
     const { data } = await api(`movie/${id}/similar`);
 
     const relatedMovies = data.results;
-    console.log(relatedMovies)
 
     const trendingTop = document.querySelector('.similares-container-bot')
     trendingTop.innerHTML = ""
